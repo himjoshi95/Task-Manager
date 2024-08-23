@@ -1,0 +1,136 @@
+/* #root{
+  max-width: 1280px;
+  margin: 0 auto;
+} */
+
+button{
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color:white;
+  background-color: rosybrown;
+  font-weight: bold;
+  padding:5px;  
+}
+
+button:hover{
+  box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+}
+
+.container{
+  width: 100%; /* Full width for better mobile adaptation */
+  max-width: 500px; /* Cap the width on larger screens */
+  height:80vh;
+  margin:0 auto;
+  margin-top: 20px;
+  color:white;
+  font-size: 20px;
+  border: 1px solid grey; 
+  padding: 10px; 
+  border-radius: 10px;
+  box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+  display: flex;
+  flex-direction: column;  
+  letter-spacing: 0.1rem; 
+  background-color:  hsl(0deg 0% 0% / 0.25);
+}
+
+.container h1{
+  text-align: center;
+  letter-spacing: 1.5rem;
+}
+
+.container-flex{
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+input[type=text]{
+  width:400px;
+  padding:5px;
+  border-radius: 10px;
+  background-color:hsl(220deg 100% 80%);
+  color:#fff;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+}
+
+input[type=text]::placeholder{
+  color:white;
+  opacity: 0.5;
+}
+.main-todos{
+  margin-top: 20px;
+  overflow-y: scroll;
+  font-weight: bolder;
+}
+
+.main-todos::-webkit-scrollbar{
+  display: none;
+}
+
+.todos{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 0.1fr 2fr 0.5fr 0.5fr;
+  gap:10px;
+  border:1px solid white;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 6.2px 6.5px 1.5px hsl(0deg 0% 0% / 0.31);
+}
+
+span{
+  overflow-x: scroll;  
+}
+
+span::-webkit-scrollbar {
+  display: none;
+}
+input[type=checkbox]{
+  cursor: pointer;
+  padding: 5px;
+  }
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Reduce width for mobile */
+    padding: 5px;
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .container h1 {
+    font-size: 18px; /* Adjust header size */
+    letter-spacing: 1rem; /* Adjust letter spacing */
+  }
+
+  .container-flex {
+    flex-direction: column; /* Stack the input and button vertically */
+    align-items: stretch; /* Ensure elements take full width */
+    margin-bottom: 10px; /* Add space below */
+  }
+
+  input[type=text] {
+    width: 95%; /* Full width for mobile */
+    margin-bottom: 10px; /* Space between input and button */
+    font-size: 18px; /* Adjust font size for input */
+  }
+
+  button {
+    width: 100%; /* Full width for mobile */
+    padding: 10px;
+    font-size: 16px; /* Adjust font size for button */
+  }
+
+  .todos {
+    grid-template-columns: 0.1fr 1fr 0.5fr 0.5fr; /* Adjust grid layout for smaller screens */
+    font-size: 16px; /* Adjust text size */
+  }
+}
+
+
