@@ -70,7 +70,7 @@ function App() {
       <div className='container'>
         <h1>TODO-LIST</h1>
         <div className='container-flex'>
-        <input type="text" onChange={e=>setTask(e.target.value)} value={task} placeholder='Enter Task...' />
+        <input className="input-one" type="text" onChange={e=>setTask(e.target.value)} value={task} placeholder='Enter Task...' />
         <button onClick={handleClick} className='add-btn'>Add Task</button>
         </div>
         <div className='main-todos'>
@@ -78,7 +78,7 @@ function App() {
             return <div key={index} className='todos' >
               <input type="checkbox" onChange={() => onIsComplete(index)} checked={todo.isComplete} />
               {todo.isUpdated && editIndex === index ?
-                <input style={{ width: "200px"}} type="text"  value={editTask} onChange={e=>setEditTask(e.target.value)} /> :
+                <input className="input-two" type="text"  value={editTask} onChange={e=>setEditTask(e.target.value)} /> :
                 <span style={todo.isComplete ? { textDecoration: 'line-through', color: '#4FFFB0' } : { textDecoration: null }} >{todo.task}</span>
               }
               {todo.isComplete ? <button style={{ opacity:0}}></button> :

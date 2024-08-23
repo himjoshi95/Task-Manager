@@ -46,7 +46,7 @@ button:hover{
   
   
 }
-input[type=text]{
+.input-one{
   width:400px;
   padding:5px;
   border-radius: 10px;
@@ -57,7 +57,7 @@ input[type=text]{
   box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
 }
 
-input[type=text]::placeholder{
+.input-one[type=text]::placeholder{
   color:white;
   opacity: 0.5;
 }
@@ -89,11 +89,21 @@ span{
 span::-webkit-scrollbar {
   display: none;
 }
-input[type=checkbox]{
+.input-one[type=checkbox]{
   cursor: pointer;
   padding: 5px;
   }
 
+.input-two{
+  width: 200px;
+  padding:2px;
+  border-radius: 10px;
+  background-color:hsl(220deg 100% 80%);
+  color:#fff;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 6.2px 12.5px 12.5px hsl(0deg 0% 0% / 0.31);
+}
 
 
 /* Mobile Styles */
@@ -110,15 +120,20 @@ input[type=checkbox]{
   }
 
   .container-flex {
-    flex-direction: column; /* Stack the input and button vertically */
+    flex-direction: column; /* Stack the .input-one and button vertically */
     align-items: stretch; /* Ensure elements take full width */
     margin-bottom: 10px; /* Add space below */
   }
 
-  input[type=text] {
+  .input-one[type=text] {
     width: 95%; /* Full width for mobile */
-    margin-bottom: 10px; /* Space between input and button */
+    margin-bottom: 10px; /* Space between .input-one and button */
     font-size: 18px; /* Adjust font size for input */
+  }
+
+  .input-two{
+    width: 98%;
+    font-size: 18px;
   }
 
   button {
